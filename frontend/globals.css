@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+html {
+  @apply bg-white text-gray-900;
+  color-scheme: light;
+}
+
+body {
+  @apply bg-white text-gray-900;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    @apply bg-gray-950 text-gray-50;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-gray-950 text-gray-50;
+  }
+}

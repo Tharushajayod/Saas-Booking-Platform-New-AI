@@ -1,0 +1,20 @@
+{
+  "name": "saas-booking-platform",
+  "version": "1.0.0",
+  "description": "Multi-Tenant Direct Booking SaaS Platform for Guest Houses & Villas - Sri Lanka",
+  "private": true,
+  "scripts": {
+    "dev": "docker-compose up",
+    "dev:build": "docker-compose build",
+    "down": "docker-compose down",
+    "dev:logs": "docker-compose logs -f",
+    "backend:shell": "docker-compose exec backend python manage.py shell",
+    "backend:migrate": "docker-compose exec backend python manage.py migrate",
+    "backend:createsuperuser": "docker-compose exec backend python manage.py createsuperuser",
+    "frontend:logs": "docker-compose logs -f frontend"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ]
+}
